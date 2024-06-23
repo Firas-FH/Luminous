@@ -1,12 +1,12 @@
 //* Importing Packages
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
+require("dotenv").config();
+const express = require("express");
+const mongoose = require("mongoose");
 const cors = require("cors");
 //* Importing Packages *\\
 
 //? Import The MongoDB Connection Module
-const connectDB = require('./DB/Connection');
+const connectDB = require("./DB/Connection");
 
 //? Creating Express application
 const app = express();
@@ -18,7 +18,7 @@ const User = require("./Models/UserModel");
 //* Importing  Routes
 const userRegisterRoute = require("./Routers/UserRoutes/RegesterRoute");
 const userLoginRoute = require("./Routers/UserRoutes/LoginRoute");
-const userLogoutRoute = require('./Routers/UserRoutes/LogoutRoute')
+const userLogoutRoute = require("./Routers/UserRoutes/LogoutRoute");
 //* Importing  Routes *\\
 
 //? Middlewares
@@ -26,16 +26,13 @@ app.use(express.json());
 app.use(cors());
 //? Middlewares ؟\\
 
-
 //! Connect to MongoDB and Start The Server
 connectDB().then(() => {
-
-    app.listen(process.env.PORT, () => {
-        console.log(`Server is running on http://localhost:${process.env.PORT}`);
-    });
+  app.listen(process.env.PORT, () => {
+    console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  });
 });
 //! Connect to MongoDB and Start The Server !\\
-
 
 //! Using Routes
 
