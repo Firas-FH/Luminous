@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './SignUpStyle.css'
 
 function SignUp() {
+
   return (
-    <div>SignUp</div>
+    <>
+
+
+  
+    </>
   )
 }
 

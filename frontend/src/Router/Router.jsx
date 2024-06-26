@@ -4,6 +4,7 @@ import { HomeRoutes } from '../Routes/HomeRoutes'
 import { LogInRoutes } from '../Routes/LogInRoutes'
 import { ProfileRoutes } from '../Routes/ProfileRoutes'
 import { SignUpRoutes } from '../Routes/SignUpRoutes'
+
 export const RouterProject = [
     {
         path : '/',

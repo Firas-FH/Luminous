@@ -8,6 +8,7 @@ import About from '../../Components/Container/AboutUs/About'
 function HomePage() {
   return (
     <>
+    {/* <SignUp/> */}
     <h1>HomePage</h1>
     <Link to={'/signup'}>sign up</Link>
     <About />
