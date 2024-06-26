@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <>
     {/* <SignUp/> */}
-    <h1>HomePage</h1>
+    <h1>HomePage g</h1>
     <Link to={'/signup'}>sign up</Link>
     <About />
     <Services />
