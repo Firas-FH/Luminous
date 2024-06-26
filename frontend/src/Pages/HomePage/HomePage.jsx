@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Services from '../../Components/Container/OurServices/Services'
+import About from '../../Components/Container/AboutUs/About'
+
 
 
 function HomePage() {
@@ -7,6 +10,9 @@ function HomePage() {
     <>
     <h1>HomePage</h1>
     <Link to={'/signup'}>sign up</Link>
+    <About />
+    <Services />
+   
     </>
   )
 }
