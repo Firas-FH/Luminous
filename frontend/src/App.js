@@ -1,7 +1,6 @@
 import './App.css';
 import RootLayout from './Layout/RootLayout';
 
-
 function App() {
   return (
     <div className="App">
