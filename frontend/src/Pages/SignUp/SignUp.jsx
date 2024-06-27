@@ -16,7 +16,7 @@ function SignUp() {
 
   async function handleSignUp(e) {
     e.preventDefault();
-    alert('ddd')
+    alert('ddwd')
 
     try {
       
