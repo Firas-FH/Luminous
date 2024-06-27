@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+// import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { RouterProject } from './Router/Router';
 
 
@@ -9,7 +10,7 @@ import { RouterProject } from './Router/Router';
 const router = createBrowserRouter(RouterProject)
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 )
 
