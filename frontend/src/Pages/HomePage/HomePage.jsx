@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Services from '../../Components/Container/OurServices/Services'
 import About from '../../Components/Container/AboutUs/About'
+import Footer from '../../Components/Container/Footer/Footer'
+// import Profile from '../../Components/Container/Profile/profile.JSX'
 
 
 
@@ -13,7 +15,8 @@ function HomePage() {
     <Link to={'/signup'}>sign up</Link>
     <About />
     <Services />
-   
+     {/* <Profile /> */}
+     <Footer />
     </>
   )
 }
