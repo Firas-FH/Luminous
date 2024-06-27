@@ -46,3 +46,21 @@ app.use("", userLoginRoute);
 app.use("", userLogoutRoute);
 
 //! Using Routes !\\
+
+const OccasionCategory = require("./Models/OccasionCategoriesModel");
+
+// Route to create a new OccasionCategory
+app.post("/createCategory", async (req, res) => {
+  try {
+    const { name } = req.body;
+
+    // Create new OccasionCategory
+    const newCategory = new OccasionCategory({ name });
+    await newCategory.save();
+
+    res.status(201).json(newCategory);
+  } catch (err) {
+    console.error("Error creating OccasionCategory:", err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
