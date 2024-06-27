@@ -16,9 +16,11 @@ module.exports = {
         highlightcolor:'var(--highlight-color)',
         alertscolor:'var(--alerts-color)'
       },
+      borderColor: {
+        // custom: 'var(--border-color)', 
+      },
     },
   },
   plugins: [],
   darkMode : 'class',
 }
-
