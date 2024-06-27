@@ -13,6 +13,7 @@ const app = express();
 
 //* Importing  Models
 const User = require("./Models/UserModel");
+const OccasionCategories = require('./Models/OccasionCategoriesModel')
 //* Importing  Models *\\
 
 //* Importing  Routes
@@ -56,9 +57,16 @@ app.post("/createCategory", async (req, res) => {
 
     // Create new OccasionCategory
     const newCategory = new OccasionCategory({ name });
-    await newCategory.save();
+    const cName = OccasionCategories.findOne({ name })
+    if (cName) {
 
-    res.status(201).json(newCategory);
+    }
+    else {
+      await newCategory.save();
+
+      res.status(201).json(newCategory);
+    }
+
   } catch (err) {
     console.error("Error creating OccasionCategory:", err);
     res.status(500).json({ message: "Server error" });

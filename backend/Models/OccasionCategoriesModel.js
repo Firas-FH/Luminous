@@ -3,6 +3,7 @@ const { Schema, model } = require("mongoose");
 const occasionCategorySchema = new Schema({
     name: {
         type: String,
+        unique: true,
         trim: true,
         required: true,
     },
