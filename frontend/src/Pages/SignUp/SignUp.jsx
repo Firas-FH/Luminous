@@ -15,8 +15,7 @@ function SignUp() {
 
   async function handleSignUp(e) {
     e.preventDefault();
-    axios
-      .post("http://localhost:8080/register", { userName, userEmail, userPassword })
+    axios.post("http://localhost:8080/register", { userName, userEmail, userPassword })
       .then(res => {
         setResponseMessage(res.data.message)
         navigate("/")
