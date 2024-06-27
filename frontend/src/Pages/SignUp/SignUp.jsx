@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import Alert from 'react-bootstrap/Alert';
-
+import { useNavigate } from "react-router-dom";
 import './SignUpStyle.css'
 import axios from 'axios';
 // import ballon1 from '../../../public/Picture/signup images/'
@@ -8,33 +7,29 @@ import axios from 'axios';
 // import img from '../../assets/radiant-cosmic-burst-stockcake 2.png'
 
 function SignUp() {
-
-
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  const [m, setM] = useState("")
-  // const navigate = useNavigate();
+  const [responseMessage, setResponseMessage] = useState("")
+  const navigate = useNavigate();
 
   async function handleSignUp(e) {
     e.preventDefault();
     axios
       .post("http://localhost:8080/register", { userName, userEmail, userPassword })
       .then(res => {
-        // alert(res.response.data.error)
-        setM(res.response.data.error)
+        setResponseMessage(res.data.message)
+        navigate("/")
       }
       )
       .catch(err => {
-        // alert(err.response.data.error)
-        setM(err.response.data.error)
+        setResponseMessage(err.response.data.error)
       }
       );
   }
 
   return (
     <>
-    
       <div className='signup relative flex justify-center items-center mt-20' style={{}}>
         <img src='./Picture/signup images/ballon1.png' className='absolute left-20 top-72 w-[225px] h-[225px]' alt="" />
         <form action="" onSubmit={handleSignUp} className='signup-form relative w-1/2 flex justify-center align-middle border border-bordercolor rounded-[36px]'>
@@ -58,12 +53,11 @@ function SignUp() {
             }} className='block w-full border border-bordercolor mt-[5px] mb-[20px] py-[7px] px-[15px] focus:outline-none focus:shadow-inner focus:shadow-headerscolor text-secondarytxt' />
             <input type="submit" value={'Create Account'} className='w-full bg-headerscolor text-white py-[9px] mb-[21px] hover:bg-highlightcolor transition' />
             <p className='text-primarytxt '>Already have an account? <span className='text-headerscolor'>Login</span></p>
+            <span style={{ color: responseMessage === "🎉 Account created successfully!" ? "green" : "red" }}>{responseMessage}</span>
           </div>
         </form>
         <img src='./Picture/signup images/ballon2.png' className='absolute right-0 bottom-64 w-[157px] h-[157px]' alt="" />
       </div>
-
-
     </>
   )
 }
