@@ -1,9 +1,9 @@
 .signup{
-    background-image: url('../../assets/Group\ 971.png');
+    background-image: url('../../../public/Picture//signup\ images/Group 971.png');
     background-repeat: no-repeat;
 }
 .signup-form{
-    background-image: url('../../assets/formbg.png');
+    background-image: url('../../../public/Picture//signup\ images/formbg.png');
 }
 .signup-form .overlay{
     background-color: rgba(245, 245, 220, 92%);
