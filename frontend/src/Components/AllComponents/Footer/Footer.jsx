@@ -1,9 +1,7 @@
-import React from 'react'
-
 function Footer() {
     return (
-        <div class="container w-screen h-[627px]">
-            <div class="relative h-[300px] overflow-hidden  bg-[50%]  bg-secondarybg flex justify-center items-center">
+        <div class=" w-screen h-[627px]">
+            <div class=" h-[300px] overflow-hidden  bg-[50%]  bg-secondarybg flex justify-center items-center">
                 <div className='text-center mb-24'>
                     <h1 className="text-xl  text-headerscolor mb-3"> Get In Touch</h1>
                     <p className="text-xl text-black ">Join us in turning dreams into dazzling events. Contact us now.</p>
@@ -13,7 +11,7 @@ function Footer() {
             <div class="container h-[281px] px-[9%]   ">
                 <div class="block h-[374px] bg-white px-5 py-12 border border-headerscolor ,  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
                     <div class="flex  ">
-                        <div className="bg-headerscolor p-8 flex flex-col gap-4">
+                        <div className="w-2/6 bg-headerscolor pl-20 pt-10 flex flex-col gap-4 ">
                             <h3 className="text-white font-bold text-2xl">Contact Information</h3>
                             <div className="flex items-center gap-3">
                                 <img src="./Picture/tel.png" alt="tel" className="w-6 h-6 " />
@@ -32,7 +30,7 @@ function Footer() {
                                 <span className="text-white text-xl">Syria, Damascus</span>
                             </div>
                         </div>
-                        <div class="mb-12 w-full  grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+                        <div class="mb-12 w-3/6  grow-1 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
                             <form >
                                 <div class="flex mb-6" data-te-input-wrapper-init>
                                     <div class="relative mr-9" data-te-input-wrapper-init>

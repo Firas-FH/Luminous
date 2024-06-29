@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="container pl-[9%] w-screen h-screen bg-primarybg">
+    <div className=" pl-[9%] w-screen h-screen bg-primarybg">
       <div className="flex flex-row items-center justify-between">
         <div className="w-1/3">
           <h1 className="text-xl  text-headerscolor mb-4">About Us</h1>
