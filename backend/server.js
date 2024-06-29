@@ -13,13 +13,14 @@ const app = express();
 
 //* Importing  Models
 const User = require("./Models/UserModel");
-const OccasionCategories = require('./Models/OccasionCategoriesModel')
+const OccasionCategory = require('./Models/OccasionCategoryModel')
 //* Importing  Models *\\
 
 //* Importing  Routes
 const userRegisterRoute = require("./Routers/UserRoutes/RegesterRoute");
 const userLoginRoute = require("./Routers/UserRoutes/LoginRoute");
 const userLogoutRoute = require("./Routers/UserRoutes/LogoutRoute");
+const createCategoryRoute = require("./Routers/OccasionCategoryRoutes/CreateCategoryRoute");
 //* Importing  Routes *\\
 
 //? Middlewares
@@ -46,29 +47,14 @@ app.use("", userLoginRoute);
 //? User Logout Route
 app.use("", userLogoutRoute);
 
+
 //! Using Routes !\\
 
-const OccasionCategory = require("./Models/OccasionCategoriesModel");
 
-// Route to create a new OccasionCategory
-app.post("/createCategory", async (req, res) => {
-  try {
-    const { name } = req.body;
+//! Category Routes
 
-    // Create new OccasionCategory
-    const newCategory = new OccasionCategory({ name });
-    const cName = OccasionCategories.findOne({ name })
-    if (cName) {
+//? Create Category Route
+app.use("", createCategoryRoute);
 
-    }
-    else {
-      await newCategory.save();
 
-      res.status(201).json(newCategory);
-    }
-
-  } catch (err) {
-    console.error("Error creating OccasionCategory:", err);
-    res.status(500).json({ message: "Server error" });
-  }
-});
+//! Category Routes !\\
