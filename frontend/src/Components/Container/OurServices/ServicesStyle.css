@@ -2,13 +2,13 @@
   padding: 2px 130px 56px 130px;
   background-color: #F5F5DC;
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .services-container h1 {
   font-size: 20px;
-  margin-bottom: 131px;
-  padding-top: 259px;
+  margin-bottom: 62px;
+  padding-top: 300px;
   color: #B8860B;
 }
 
@@ -77,3 +77,9 @@
   inset: 6px;
 
 }   
+
+
+/* .service-card:hover {
+  background-color: #ffd700; 
+} */
+
