@@ -13,13 +13,15 @@ const app = express();
 
 //* Importing  Models
 const User = require("./Models/UserModel");
-const OccasionCategories = require('./Models/OccasionCategoriesModel')
+const OccasionCategory = require('./Models/OccasionCategoryModel');
+const Occasion = require("./Models/OccasionModel")
 //* Importing  Models *\\
 
 //* Importing  Routes
 const userRegisterRoute = require("./Routers/UserRoutes/RegesterRoute");
 const userLoginRoute = require("./Routers/UserRoutes/LoginRoute");
 const userLogoutRoute = require("./Routers/UserRoutes/LogoutRoute");
+const createCategoryRoute = require("./Routers/OccasionCategoryRoutes/CreateCategoryRoute");
 //* Importing  Routes *\\
 
 //? Middlewares
@@ -46,29 +48,36 @@ app.use("", userLoginRoute);
 //? User Logout Route
 app.use("", userLogoutRoute);
 
+
 //! Using Routes !\\
 
-const OccasionCategory = require("./Models/OccasionCategoriesModel");
 
-// Route to create a new OccasionCategory
-app.post("/createCategory", async (req, res) => {
+//! Category Routes
+
+//? Create Category Route
+app.use("", createCategoryRoute);
+
+
+//! Category Routes !\\
+
+
+app.post('/createOccasion', async (req, res) => {
   try {
-    const { name } = req.body;
+    const { occasionCategoryName } = req.body;
 
-    // Create new OccasionCategory
-    const newCategory = new OccasionCategory({ name });
-    const cName = OccasionCategories.findOne({ name })
-    if (cName) {
+    const category = await OccasionCategory.findOne({ occasionCategoryName })
+    const id = category._id
+    //? Creating new Occasion  
+    const newOccasion = new Occasion({
+      occasionName: req.body.occasionName,
+      occasionPrice: req.body.occasionPrice,
+      categoryId: id
+    });
 
-    }
-    else {
-      await newCategory.save();
+    await newOccasion.save();
 
-      res.status(201).json(newCategory);
-    }
-
+    res.status(201).json(newOccasion);
   } catch (err) {
-    console.error("Error creating OccasionCategory:", err);
-    res.status(500).json({ message: "Server error" });
+    res.status(400).json({ message: err.message });
   }
 });

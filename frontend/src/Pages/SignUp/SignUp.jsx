@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import "./SignUpStyle.css";
-import axios from "axios";
+import './SignUpStyle.css'
+import axios from 'axios';
 // import ballon1 from '../../../public/Picture/signup images/'
 // import ballon2 from './public/ballon2.png'
 // import img from '../../assets/radiant-cosmic-burst-stockcake 2.png'
@@ -10,24 +10,22 @@ function SignUp() {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  const [responseMessage, setResponseMessage] = useState("");
+  const [responseMessage, setResponseMessage] = useState("")
   const navigate = useNavigate();
 
   async function handleSignUp(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/register", {
-        userName,
-        userEmail,
-        userPassword,
-      })
-      .then((res) => {
-        setResponseMessage(res.data.message);
-        navigate("/");
-      })
-      .catch((err) => {
-        setResponseMessage(err.response.data.error);
-      });
+      .post("http://localhost:8080/register", { userName, userEmail, userPassword })
+      .then(res => {
+        setResponseMessage(res.data.message)
+        navigate("/")
+      }
+      )
+      .catch(err => {
+        setResponseMessage(err.response.data.error)
+      }
+      );
   }
 
   return (
@@ -122,7 +120,7 @@ function SignUp() {
         />
       </div>
     </>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp

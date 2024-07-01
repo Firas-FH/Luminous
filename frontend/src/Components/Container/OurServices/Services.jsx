@@ -2,13 +2,13 @@ import './ServicesStyle.css';
 
 const Services = () => {
   return (
-    <div className="services-container">
-      <h2 className="font-medium">Our Services</h2>
+    <div className="services-container pl-[9%]">
+      <h1 className="text-xl  text-headerscolor mb-4">Our Services</h1>
       {/* <h1 className="text-xl  text-headerscolor mb-4">Our Services</h1> */}
       <div className="service-cards">
-        <div className="service-card ">
+        <div className="service-card  hover:bg-[#B8860B] hover:cursor-pointer">
           <img src="./Picture/Event.png" alt="Checklist Icon" />
-          <h3 className="text-xl font-bold br">Event Planning and Coordination</h3>
+          <h3 className="text-xl font-bold">Event Planning and Coordination</h3>
           <p>From concept to execution, we manage every detail for a seamless event.</p>
         </div>
         <div className="service-card">

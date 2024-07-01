@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Services from '../../Components/Container/OurServices/Services'
 import About from '../../Components/Container/AboutUs/About'
-import Footer from '../../Components/Container/Footer/Footer'
-import OurTeam from '../../Components/Container/OurTeam/OurTeam'
-import Testimonials from '../../Components/Container/Testimonials/Testimonials'
-import Gallery from '../../Components/Container/Gallery/Gallery'
-// import Profile from '../../Components/Container/Profile/profile.JSX'
+import FAQ from '../../Components/Container/FAQ/FAQ.jsx'
+
+
+
 
 
 
@@ -18,11 +17,9 @@ function HomePage() {
     <Link to={'/login'}>Log in</Link>
     <About />
     <Services />
-    <Gallery/>
-    <Testimonials/>
-    <OurTeam/>
-     {/* <Profile /> */}
-     <Footer />
+    <FAQ />
+    
+    
     </>
   )
 }

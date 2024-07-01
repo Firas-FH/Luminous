@@ -1,3 +1,5 @@
+import "./AboutStyle.css"
+import video from './video_2024-06-30_18-23-26.mp4'
 function About() {
   return (
     <div className=" pl-[9%] w-screen h-screen bg-primarybg">
