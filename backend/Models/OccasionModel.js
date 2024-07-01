@@ -1,58 +1,27 @@
 const { Schema, model } = require("mongoose");
 
-// Define Occasions Schema
-const occasionSchema = new Schema({
-    occasion_id: {
-        type: Number,
-        required: true,
+const OccasionSchema = new Schema({
+    occasionName: {
+        type: String,
         unique: true,
+        trim: true,
+        lowercase: true,
+        required: [true, "Occasion name is required."],
+        minlength: [3, "Occasion name must be at least 3 characters long."],
+        maxlength: [25, "Occasion name cannot exceed 25 characters."],
     },
-    user_id: {
+    occasionPrice: {
         type: Number,
-        required: true,
+        required: [true, "Occasion price is required."],
     },
-    category_id: {
-        type: Number,
-        required: true,
-    },
-    place_id: {
-        type: Number,
-        required: true,
-    },
-    occasion: {
+    categoryId: {
         type: String,
-        required: true,
-    },
-    event_date: {
-        type: Date,
-        required: true,
-    },
-    colors: String,
-    decorations: String,
-    decorations_price: Schema.Types.Decimal128,
-    invitees_count: {
-        type: Number,
-        default: 0,
-    },
-    invitees_price: Schema.Types.Decimal128,
-    food: String,
-    food_price: Schema.Types.Decimal128,
-    invitation_template: String,
-    invitation_colors: String,
-    invitation_font: String,
-    invitation_message: String,
-    invitation_image_url: String,
-    additional_details: String,
-    total_price: Schema.Types.Decimal128,
-    status: {
-        type: String,
-        enum: ["pending", "confirmed", "cancelled"],
-        default: "pending",
-    },
-
+        required: [true, "Occasion Categorys ID is required."]
+    }
+}, {
+    timestamps: true
 });
 
-// Create model
-const Occasion = model("Occasion", occasionSchema);
+const Occasion = model("Occasion", OccasionSchema);
 
 module.exports = Occasion;
