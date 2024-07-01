@@ -11,7 +11,7 @@ function Footer() {
             <div class="container h-[281px] px-[9%]   ">
                 <div class="block h-[374px] bg-white px-5 py-12 border border-headerscolor ,  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
                     <div class="flex  ">
-                        <div className="w-2/6 bg-headerscolor pl-20 pt-10 flex flex-col gap-4 ">
+                        <div className="w-2/6 bg-headerscolor pl-10 pt-10 flex flex-col gap-4 ">
                             <h3 className="text-white font-bold text-2xl">Contact Information</h3>
                             <div className="flex items-center gap-3">
                                 <img src="./Picture/tel.png" alt="tel" className="w-6 h-6 " />
@@ -30,10 +30,10 @@ function Footer() {
                                 <span className="text-white text-xl">Syria, Damascus</span>
                             </div>
                         </div>
-                        <div class="mb-12 w-3/6  grow-1 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+                        <div class="mb-12 w-[100%]  grow-1 basis-auto md:px-3 lg:mb-0  lg:px-6">
                             <form >
                                 <div class="flex mb-6" data-te-input-wrapper-init>
-                                    <div class="relative mr-9" data-te-input-wrapper-init>
+                                    <div class="relative mr-9 w-1/2" data-te-input-wrapper-init>
                                         <input type="text"
                                             class="peer min-h-[auto] w-full bg-transparent py-[0.32rem] px-3  outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 border-b-2 border-neutral-300"
                                             id="exampleInput90" placeholder="Name" />
@@ -42,7 +42,7 @@ function Footer() {
                                             for="exampleInput90">Name
                                         </label>
                                     </div>
-                                    <div class="relative" data-te-input-wrapper-init>
+                                    <div class="relative w-1/2" data-te-input-wrapper-init>
                                         <input type="email"
                                             class="peer min-h-[auto] w-full bg-transparent py-[0.32rem] px-3  outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 border-b-2 border-neutral-300"
                                             id="exampleInput91" placeholder="Email address" />
@@ -52,7 +52,7 @@ function Footer() {
                                         </label>
                                     </div>
                                 </div>
-                                <div class="relative mb-6" data-te-input-wrapper-init>
+                                <div class="relative mb-6 w-full" data-te-input-wrapper-init>
                                     <input type="text"
                                         class="peer block min-h-[auto] w-full bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 border-b-2 border-neutral-300"
                                         id="exampleInput90" placeholder="Name" />
@@ -61,7 +61,7 @@ function Footer() {
                                         for="exampleInput90">Subject
                                     </label>
                                 </div>
-                                <div class="relative mb-6 " data-te-input-wrapper-init>
+                                <div class="relative mb-6 w-full" data-te-input-wrapper-init>
                                     <textarea
                                         class="peer block min-h-[auto] w-full bg-transparent py-[0.32rem] px-3  outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 border-b-2 border-neutral-300"
                                         id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
