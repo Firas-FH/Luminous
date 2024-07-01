@@ -1,4 +1,6 @@
 import './App.css';
+import '@splidejs/react-splide/css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import RootLayout from './Layout/RootLayout';
 
 function App() {

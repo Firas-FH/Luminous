@@ -16,9 +16,9 @@ module.exports = {
         highlightcolor:'var(--highlight-color)',
         alertscolor:'var(--alerts-color)'
       },
-      borderColor: {
-        // custom: 'var(--border-color)', 
-      },
+      fontFamily:{
+        montsFont:'var(--montserrate-font)'
+      }
     },
   },
   plugins: [],

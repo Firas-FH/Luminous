@@ -91,8 +91,8 @@
 
 function Footer() {
     return (
-        <div class="container ">
-            <div class="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-secondarybg"></div>
+        <div class=" ">
+            <div class=" h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-secondarybg"></div>
             <div class="container px-6 md:px-12">
                 <div class="block bg-white px-5 py-12 border border-headerscolor , dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
                     <div class="flex flex-wrap">
