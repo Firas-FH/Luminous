@@ -1,6 +1,6 @@
 function EventCard({ event, onEdit, onDelete, onAddComment }) {
   return (
-    <div className="bg-secondarybg w-[332px] h-[273px] shadow-md shadow-headerscolor p-4">
+    <div className="bg-secondarybg w-[332px] h-[273px] shadow-md shadow-headerscolor ">
       <h3 className="text-lg  mb-2">{event.name}</h3>
       <p className=" text-lg mb-2">{event.place}</p>
       <p className=" text-lg mb-4">{event.date}</p>
@@ -45,12 +45,11 @@ function Profile() {
   ];
 
   return (
-    <div className="bg-primarybg min-h-screen p-8">
-      <div className="flex justify-between">
+    <div className="bg-primarybg min-h-screen pt-2 pr-[9%] flex justify-between">
+      <div className="flex w-1/3 h-screen bg-secondarybg">
         <h1 className="text-3xl font-bold text-yellow-600">Profile</h1>
-        <div className="text-lg font-bold text-yellow-600">Your Events:</div>
-      </div>
-      <div className="flex flex-col space-y-4 mt-8">
+        {/* <div className="text-lg font-bold text-yellow-600">Your Events:</div> */}
+        <div className="flex flex-col space-y-4 mt-8">
         <div className="flex flex-col space-y-2">
           <label htmlFor="userName" className="text-gray-700 font-bold">
             User Name
@@ -62,6 +61,8 @@ function Profile() {
           </label>
         </div>
       </div>
+      </div>
+     
       <div className="grid grid-cols-2 gap-4 mt-8">
         <EventCard event={{ name: 'Before 2 days', place: '', date: '' }} />
         {events.map((event, index) => (

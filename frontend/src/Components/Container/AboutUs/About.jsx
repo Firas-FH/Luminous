@@ -1,9 +1,10 @@
 import "./AboutStyle.css"
+import video from './video_2024-06-30_18-23-26.mp4'
 function About() {
     return (
       <div className="about pl-[9%]  h-screen w-screen">
         <div className="flex flex-row items-center justify-between">
-          <div className="w-1/3 pt-12">
+          <div className="w-1/3 pt-12 ">
             <h1 className="text-xl  text-headerscolor mb-4">About Us</h1>
             <p className="text-2xl text-black mb-8">
               Luminous started with a spark of inspiration to illuminate life's special moments. We've grown into a trusted name, known for our creativity, dedication, and passion for bringing people together.
@@ -40,15 +41,16 @@ function About() {
         </div>
         <div className=" flex justify-center ">
           <div className="relative  md:w-2/3">
-            <video
-              className="shadow-md w-5/6 h-5/6 pt-14 "
+            {/* <video
+              className="shadow-md h-[28%] pt-14 w-full"
               controls
               autoplay
               muted
+              
             >
-              <source src="https://www.instagram.com/reel/C5OnG_RrDcG/?igsh=MTE3cmJkNWtpMTRlNA==" type="video/mp4" />
+              <source src={video} alt="Luminous event planning" type="video/mp4" />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
           </div>
         </div>
       </div>
