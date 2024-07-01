@@ -13,7 +13,8 @@ const app = express();
 
 //* Importing  Models
 const User = require("./Models/UserModel");
-const OccasionCategory = require('./Models/OccasionCategoryModel')
+const OccasionCategory = require('./Models/OccasionCategoryModel');
+const Occasion = require("./Models/OccasionModel")
 //* Importing  Models *\\
 
 //* Importing  Routes
@@ -58,3 +59,25 @@ app.use("", createCategoryRoute);
 
 
 //! Category Routes !\\
+
+
+app.post('/createOccasion', async (req, res) => {
+  try {
+    const { occasionCategoryName } = req.body;
+
+    const category = await OccasionCategory.findOne({ occasionCategoryName })
+    const id = category._id
+    //? Creating new Occasion  
+    const newOccasion = new Occasion({
+      occasionName: req.body.occasionName,
+      occasionPrice: req.body.occasionPrice,
+      categoryId: id
+    });
+
+    await newOccasion.save();
+
+    res.status(201).json(newOccasion);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});

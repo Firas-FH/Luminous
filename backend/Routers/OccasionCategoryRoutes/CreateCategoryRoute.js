@@ -16,12 +16,9 @@ app.use(cors());
 //? Importing Constants Regester Messages
 const {
     CATEGORY_NAME_REQUIRED,
-    CATEGORY_NAME_TOO_SHORT,
-    CATEGORY_NAME_TOO_LONG,
-    CATEGORY_NAME_EXISTS,
     CREATED_SUCCESSFUL,
-    SERVER_ERROR
 } = require("../../Constants/OccasionCategory/CreateCategoryMessages");
+
 
 //? Importing Regester Verification Functions
 const {
@@ -30,23 +27,21 @@ const {
 } = require("../../Controllers/OccasionCategoryControllers/CreateCategoryController");
 
 
-
-
 //? Register Route
 router.post("/createCategory", async (req, res) => {
     try {
-        const { name, imageUrl } = req.body;
+        const { categoryName, categoryImageUrl } = req.body;
 
         //? Validate request body
-        if (!name) {
+        if (!categoryName) {
             return res.status(400).json({ message: CATEGORY_NAME_REQUIRED });
         }
-        await checkCategoryExists(name);
+
+        await checkCategoryExists(categoryName);
 
         //? Create new OccasionCategory
-        const newCategory = await createCategory(name, imageUrl);
+        const newCategory = await createCategory(categoryName, categoryImageUrl);
 
-        ;
         //? Sending success response
         res.status(201).json({ message: CREATED_SUCCESSFUL });
     } catch (error) {
