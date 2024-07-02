@@ -31,13 +31,13 @@ function SignUp() {
   return (
     <>
       <div
-        className="signup relative min-h-screen   py-14 bg-primarybg"
+        className="signup relative min-h-screen  pt-24 pb-14 bg-primarybg"
         style={{}}
       >
         <img src="./Picture/signup images/Line 5.png" alt="" 
-        className="absolute right-[90px] h-[102vh] top-[-50px]"/>
+        className="absolute right-[9%] h-[100vh] top-[-50px] z-1000"/>
         <img src="./Picture/signup images/Line 6.png" alt="" 
-        className="absolute left-[0px] top-[-4%] h-[90%]"/>
+        className="absolute left-[0px] h-[90%] top-[-50px] z-1000"/>
         <img
           src="./Picture/signup images/ballon1.png"
           className="absolute left-[4.5%] top-72 w-[225px] h-[225px]"
