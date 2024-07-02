@@ -34,7 +34,7 @@ function Testimonials() {
   return (
     <>
       <div className="mx-[9%] py-[40px]">
-        <p className="text-headerscolor font-montsFont font-semibold text-[20px] mb-[20px]">
+        <p className="text-headerscolor font-montserratefont font-semibold text-[20px] mb-[20px]">
           Testimonials
         </p>
         <Splide

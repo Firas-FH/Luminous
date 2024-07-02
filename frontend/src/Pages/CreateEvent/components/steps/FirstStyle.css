@@ -1,0 +1,22 @@
+.selected[type="radio"]:checked {
+  accent-color: #B8860B;
+  /* or any other color you prefer */
+}
+
+.selected[type="checkbox"]:checked {
+  accent-color: #B8860B;
+  /* or any other color you prefer */
+}
+
+.space1 {
+  margin-top: -115px;
+}
+
+.space2 {
+  margin-top: -280px;
+}
+
+.space3{
+  /* margin-top: -50px; */
+
+}

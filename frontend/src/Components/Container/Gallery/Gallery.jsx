@@ -84,7 +84,7 @@ function Gallery() {
   return (
     <>
     <div className="mx-[9%] py-[40px]">
-    <p className="text-headerscolor font-montsFont font-semibold text-[20px] mb-[20px]">
+    <p className="text-headerscolor font-montserratefont font-semibold text-[20px] mb-[20px]">
           Gallery
         </p>
         <Container className="galleryWrapper">
@@ -121,7 +121,7 @@ function Gallery() {
                   <div className="overlay">
                     <div className="overlay-content">
                       {/* <p>{item.titile}</p> */}
-                      <Link to={'/createevent'} className='font-montsFont'>Plan Your Party</Link>
+                      <Link to={'/createevent'} className='font-montserratefont'>Plan Your Party</Link>
                     </div>
                   </div>
                 </div>

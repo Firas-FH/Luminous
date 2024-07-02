@@ -7,7 +7,7 @@ function TeamMember({name,position,dots,person,top,bg}) {
     <div>
         <img src={dots} className='relative top-[30px] left-[-8px]' alt="" />
           <div className='relative sm:rounded-[200px] rounded-[200px] h-[35%] flex flex-col justify-center align-middle' style={{backgroundColor:bg}}>
-            <div className='font-montsFont text-center text-white mx-auto pt-[50px] pb-[52px]'>
+            <div className='font-montserratefont text-center text-white mx-auto pt-[50px] pb-[52px]'>
               <p className='font-[20px] font-bold'>{name}</p>
               <p className='font-[18px] mt-[10px]'>{position}a</p>
             </div>
