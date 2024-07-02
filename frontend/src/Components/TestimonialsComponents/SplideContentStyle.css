@@ -1,0 +1,16 @@
+.splide__arrow {
+    background-color: #DAA520 !important;
+    width: 36px;
+    height: 36px;
+    border-radius: 0;
+    opacity: 1;
+    position: absolute;
+}
+.splide__arrow--next{
+    right: 46%;
+    top: 100%;
+}
+.splide__arrow--prev{
+    top: 100%;
+    left: 46%;
+}

@@ -14,10 +14,23 @@ module.exports = {
         headerscolor:'var(--headers-color)',
         btnbg:'var(--btn-bg)',
         highlightcolor:'var(--highlight-color)',
-        alertscolor:'var(--alerts-color)'
+        alertscolor:'var(--alerts-color)',
+
       },
-      borderColor: {
-        // custom: 'var(--border-color)', 
+      fontFamily: {
+        'lora': 'var(--lora-font)',
+        montserratefont:'var(--montserrate-font)',
+        opensansfont:'var(--open-sans-font)',
+        lorafont:'var(--lora-font)'
+      },
+      fontSize: {
+        'custom-25': '25px',
+      },
+      transitionProperty: {
+        font: 'font-size, font-weight, font-style, font-family',
+      },
+      zIndex: {
+        1000: '1000',
       },
     },
   },

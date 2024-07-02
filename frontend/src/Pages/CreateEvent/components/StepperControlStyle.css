@@ -1,0 +1,8 @@
+ .nextButton:hover {
+    background-color: var(--border-color);
+  }
+  .cna:hover{
+    cursor: not-allowed;
+    background-color: var(--secondary-bg);
+    color: #64748b;
+  }

@@ -17,5 +17,8 @@ body{
         --btn-bg: #FFD700;
         --highlight-color: #DAA520;
         --alerts-color: #B87333;
+        --montserrate-font: "Montserrat", sans-serif;
+        --open-sans-font: "Open Sans", sans-serif;
+        --lora-font: "Lora", serif;
       }
   }
