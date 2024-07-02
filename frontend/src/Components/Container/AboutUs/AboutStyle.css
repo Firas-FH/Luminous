@@ -2,6 +2,20 @@
     background-image: url(../../../../public/Picture/al2.jpg);
     background-size: cover;
   background-position: center;
-  /* height: 100vh; */
+  /* height: 100%; */
   /* width: 100vw; */
  } 
+
+ @media (max-width: 768px) {
+  .about1 {
+    height: 100%;
+} 
+.video{
+  padding-top: 131px;
+}
+.Experience{
+  width: 63%;
+  padding:0px;
+}
+
+ }
