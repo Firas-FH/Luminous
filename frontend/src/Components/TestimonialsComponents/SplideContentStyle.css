@@ -4,12 +4,13 @@
     height: 36px;
     border-radius: 0;
     opacity: 1;
+    position: absolute;
 }
-/* .splide__arrow--next{
-    right: 10em;
-    top: 352px;
+.splide__arrow--next{
+    right: 46%;
+    top: 100%;
 }
 .splide__arrow--prev{
-    top: 352px;
-    left: 53rem;
-} */
+    top: 100%;
+    left: 46%;
+}
