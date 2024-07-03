@@ -1,0 +1,5 @@
+@media(min-width:0px) and (max-width:767px){
+    .mem-box{
+        top: 20px !important;
+    }
+}

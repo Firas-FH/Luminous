@@ -1,6 +1,9 @@
 //* Importing Packages
 const express = require("express");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+
 const app = express();
 
 //? Creating Express router
@@ -13,12 +16,12 @@ const User = require("../../Models/UserModel");
 app.use(express.json());
 app.use(cors());
 
-//? Importing Constants Regester Messages
+//? Importing Constants Register Messages
 const {
   SUCCESSFUL_REGISTRATION_MESSAGE,
 } = require("../../Constants/User/RegisterMessages");
 
-//? Importing Regester Verification Functions
+//? Importing Register Verification Functions
 const {
   validateFields,
   validateEmail,
@@ -29,9 +32,7 @@ const {
 router.post("/register", async (req, res) => {
   try {
     await validateFields(req);
-
     await validateEmail(req);
-
     await checkDuplicateEmail(req);
 
     //? Creating new User Instance
@@ -44,15 +45,24 @@ router.post("/register", async (req, res) => {
     //? Saving the new user to the database
     await newUser.save();
 
-    //? Sending success response
-    res.status(201).json({ message: SUCCESSFUL_REGISTRATION_MESSAGE });
+    //? Generate JWT token
+    const token = jwt.sign(
+      { userId: newUser._id },
+      process.env.JWT_SECRET,
+      { expiresIn: '5d' } // Token expires in 5 days
+    );
+
+    //? Sending success response with token
+    res.status(201).json({
+      message: SUCCESSFUL_REGISTRATION_MESSAGE,
+      userToken: token,
+    });
   } catch (error) {
+    let errorMessage = error.message;
     if (error.message === "User validation failed: userPassword: Password must be at least 6 characters long.") {
-      error.message = "Password must be at least 6 characters long."
+      errorMessage = "Password must be at least 6 characters long.";
     }
-    res
-      .status(400)
-      .json({ error: error.message });
+    res.status(400).json({ error: errorMessage });
   }
 });
 

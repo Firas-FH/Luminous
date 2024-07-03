@@ -5,7 +5,7 @@ import { Row } from 'react-bootstrap'
 function OurTeam() {
   return (
     <>
-    <div className='relative sm:pb-32 md:pb-40 lg:pb-24 xl:pb-0   sm:min-h-[100vh] md:min-h-[120vh] lg:min-h-[130vh] xl:min-h-[110vh] 2xl:min-h-[0vh] min-h-[450vh]'>
+    <div className='relative sm:pb-32 md:pb-40 lg:pb-24 xl:pb-0   sm:min-h-[100vh] md:min-h-[120vh] lg:min-h-[130vh] xl:min-h-[110vh] 2xl:min-h-[0vh] min-h-[450vh] bg-secondarybg'>
     <div className=' mx-[9%] py-[40px] '>
         <p className='text-headerscolor font-montserratefont font-semibold text-[20px] mb-[20px]'>Our Team</p>
         <p className='font-montserratefont text-[16px]' >Meet our team...the creative minds behind every unforgettable event.</p>

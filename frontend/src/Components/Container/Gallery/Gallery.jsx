@@ -83,7 +83,7 @@ function Gallery() {
     };
   return (
     <>
-    <div className="mx-[9%] py-[40px]">
+    <div className="mx-[9%] py-[40px] bg-secondarybg">
     <p className="text-headerscolor font-montserratefont font-semibold text-[20px] mb-[20px]">
           Gallery
         </p>

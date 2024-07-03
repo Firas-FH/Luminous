@@ -87,7 +87,6 @@ const getUpcomingEvents = async (req, res) => {
       user: userId,
       date: { $gt: twoDaysLater }
     });
-    console.log(upcomingEvents);
 
     res.json(upcomingEvents);
   } catch (error) {
