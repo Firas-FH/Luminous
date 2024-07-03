@@ -2,7 +2,7 @@ function FAQ() {
     return (
       <section className=" py-10 bg-primarybg sm:py-16 lg:py-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <h1 className=" text-xl  text-headerscolor mb-4">FAQ</h1>
+          <h1 className=" text-headerscolor font-montserratefont font-semibold text-[20px] mb-4">FAQ</h1>
           <div className=" mx-auto mt-8 space-y-4 md:mt-16">
             {questions.map((question, index) => (
               <div
