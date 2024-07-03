@@ -25,7 +25,13 @@ const eventSchema = new Schema({
     user: { type:String, required: true }
   }, {
     timestamps: true,
+    toJSON: { getters: true }
   });
+
+  // Custom getter for formatting date
+eventSchema.path('date').get(function (value) {
+  return value.toISOString().split('T')[0]; // Return date in yyyy-mm-dd format
+});
 
 const Event = mongoose.model('Event', eventSchema);
 
