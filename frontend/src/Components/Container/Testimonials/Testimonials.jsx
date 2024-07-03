@@ -33,30 +33,32 @@ function Testimonials() {
   ];
   return (
     <>
-      <div className="mx-[9%] py-[40px] bg-secondarybg">
-        <p className="text-headerscolor font-montserratefont font-semibold text-[20px] mb-[20px]">
-          Testimonials
-        </p>
-        <Splide
-          options={{
-            perPage: 1,
-            autoplay: true,
-            type: "loop",
-            pagination: false,
-          }}
-          className=" flex justify-center"
-        >
-          {testiData.map((e) => {
-            return (
-              <>
-                <SplideSlide>
-                  <SplideContent img={e.img} text={e.text} name={e.name} star={e.star}/>
-                </SplideSlide>
-              </>
-            );
-          })}
-        </Splide>
-      </div>
+    <div className="bg-secondarybg">
+        <div className="mx-[9%] py-[40px] ">
+          <p className="text-headerscolor font-montserratefont font-semibold text-[20px] mb-[20px]">
+            Testimonials
+          </p>
+          <Splide
+            options={{
+              perPage: 1,
+              autoplay: true,
+              type: "loop",
+              pagination: false,
+            }}
+            className=" flex justify-center"
+          >
+            {testiData.map((e) => {
+              return (
+                <>
+                  <SplideSlide>
+                    <SplideContent img={e.img} text={e.text} name={e.name} star={e.star}/>
+                  </SplideSlide>
+                </>
+              );
+            })}
+          </Splide>
+        </div>
+    </div>
     </>
   );
 }
