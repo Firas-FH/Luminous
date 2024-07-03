@@ -6,16 +6,12 @@ import FAQ from '../../Components/Container/FAQ/FAQ.jsx'
 import OurTeam from '../../Components/Container/OurTeam/OurTeam.jsx'
 import Testimonials from '../../Components/Container/Testimonials/Testimonials.jsx'
 import Gallery from '../../Components/Container/Gallery/Gallery.jsx'
-// import HeroSection from '../../Components/Container/Hero/HeroSection'
 import Hero from '../../Components/Container/Hero/Hero'
+import Footer from '../../Components/AllComponents/Footer/Footer.jsx'
 
 function HomePage() {
   return (
     <>
-    <Link to={'/signup'}>sign up</Link>
-    <br />
-    <Link to={'/login'}>Log in</Link>
-    {/* <HeroSection/> */}
     <Hero/>
     <About />
     <Services />
@@ -23,7 +19,7 @@ function HomePage() {
     <Testimonials/>
     <OurTeam/>
     <FAQ />
-    
+    <Footer/>
     
     </>
   )

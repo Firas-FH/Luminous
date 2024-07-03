@@ -8,3 +8,15 @@
 .signup-form .overlay{
     background-color: rgba(245, 245, 220, 92%);
 }
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(40%);
+    }
+    50% {
+      transform: translateY(-40%); 
+    }
+  }
+  .balloon-image {
+    animation: moveUpDown 3s infinite linear;
+  }
+    

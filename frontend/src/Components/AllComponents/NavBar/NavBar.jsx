@@ -34,9 +34,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <Link to={'/'}>
           <span>Luminous</span>
-        </Link>
       </div>
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li>
