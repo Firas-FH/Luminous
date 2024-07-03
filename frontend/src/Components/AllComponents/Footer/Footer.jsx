@@ -31,7 +31,7 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="mb-12 pl-3 w-full , md:w-1/2 lg:w-1/2 xl:w-1/2 ">
+              <div className="mb-12 pl-3 w-full justify-between, md:w-1/2 lg:w-1/2 xl:w-1/2 ">
                 <form class="">
                   <div className="flex mb-6" data-te-input-wrapper-init>
                     <div className="relative mr-9 w-1/2" data-te-input-wrapper-init>

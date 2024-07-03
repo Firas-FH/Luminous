@@ -1,82 +1,40 @@
-function EventCard({ event, onEdit, onDelete, onAddComment }) {
+const events = [
+  { id: 1, title: "Before 2 days", details: { location: "Location A", date: "Date A", name: "Event A" } },
+  { id: 2, title: "Before 3 days", details: { location: "Location B", date: "Date B", name: "Event B" } },
+  { id: 3, title: "after the date", details: { location: "Location C", date: "Date C", name: "Event C" } },
+];
+
+const Profile = () => {
   return (
-    <div className="bg-secondarybg w-[332px] h-[273px] shadow-md shadow-headerscolor ">
-      <h3 className="text-lg  mb-2">{event.name}</h3>
-      <p className=" text-lg mb-2">{event.place}</p>
-      <p className=" text-lg mb-4">{event.date}</p>
-      <div className="flex space-x-2">
-        {/* <button
-          className="bg-headerscolor hover:bg-highlightcolor transition text-white  py-2 px-4 "
-          onClick={onEdit}
-        >
-          Edit
-        </button>
-        <button
-          className="bg-headerscolor hover:bg-highlightcolor transition text-white  py-2 px-4 "
-          onClick={onDelete}
-        >
-          Delete
-        </button>
-        {onAddComment && (
-          <button
-          className="bg-headerscolor hover:bg-highlightcolor transition text-white  py-2 px-4 "
-            onClick={onAddComment}
-          >
-            Add comment
-          </button> */}
-        {/* )} */}
+    <div className="min-h-screen bg-yellow-50 flex">
+      <div className="w-1/4 bg-yellow-100 p-6 flex flex-col items-start">
+        <div className="text-5xl  text-headerscolor mb-4">Profile</div>
+        <div className=" text-2xl mb-2">User Name</div>
+        <div className=" text-2xl mb-4">Email</div>
+        <button className="bg-yellow-600 text-white px-4 py-2 rounded">Log out</button>
+      </div>
+      <div className="flex-1 p-6">
+        <div className="flex space-x-4 mb-6">
+          <button className="bg-yellow-600 text-white px-4 py-2 rounded">Before 2 days</button>
+          <button className="text-yellow-600 px-4 py-2 rounded">Before 3 days</button>
+          <button className="text-yellow-600 px-4 py-2 rounded">after the date</button>
+        </div>
+        <div className="text-xl mb-4">Your Events :</div>
+        <div className="grid grid-cols-3 gap-4">
+          {events.map(event => (
+            <div key={event.id} className="relative group p-6 bg-yellow-100 rounded shadow hover:bg-yellow-200 cursor-pointer">
+              <div className="text-center">{event.title}</div>
+              <div className="absolute inset-0 bg-yellow-50 bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div>Location: {event.details.location}</div>
+                <div>Date: {event.details.date}</div>
+                <div>Event: {event.details.name}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
-}
-
-function Profile() {
-  const events = [
-    {
-      name: 'Event Name',
-      place: 'Event Place',
-      date: 'Event Date',
-    },
-    {
-      name: 'Event Name',
-      place: 'Event Place',
-      date: 'Event Date',
-    },
-  ];
-
-  return (
-    <div className="bg-primarybg min-h-screen pt-2 pr-[9%] flex justify-between">
-      <div className="flex w-1/3 h-screen bg-secondarybg">
-        <h1 className="text-3xl font-bold text-yellow-600">Profile</h1>
-        {/* <div className="text-lg font-bold text-yellow-600">Your Events:</div> */}
-        <div className="flex flex-col space-y-4 mt-8">
-        <div className="flex flex-col space-y-2">
-          <label htmlFor="userName" className="text-gray-700 font-bold">
-            User Name
-          </label>
-        </div>
-        <div className="flex flex-col space-y-2">
-          <label htmlFor="email" className="text-gray-700 font-bold">
-            Email
-          </label>
-        </div>
-      </div>
-      </div>
-     
-      <div className="grid grid-cols-2 gap-4 mt-8">
-        <EventCard event={{ name: 'Before 2 days', place: '', date: '' }} />
-        {events.map((event, index) => (
-          <EventCard
-            key={index}
-            event={event}
-            onEdit={() => console.log('Edit event', event)}
-            onDelete={() => console.log('Delete event', event)}
-            onAddComment={() => console.log('Add comment to event', event)}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
+};
 
 export default Profile;
