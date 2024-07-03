@@ -39,7 +39,7 @@ function About() {
           <img src="./Picture/Experience.png" alt="Luminous event planning" className=" Experience pt-11   object-cover " />
           </div>
         </div>
-        <div className=" video flex justify-center pr-[9%] pt-8 ">
+        <div className=" video flex justify-center pr-[9%] pt-4 ">
             <video
               className="shadow-md  w-1/2"
               controls
