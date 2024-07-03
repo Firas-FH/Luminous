@@ -3,7 +3,7 @@ import video from './video.mp4'
 function About() {
     return (
       <div className="about pl-[9%]  h-screen w-screen ">
-<div className=" about1 flex flex-wrap justify-center md:flex-nowrap">
+<div className=" about1 flex justify-center md:flex-nowrap">
            <div className="w-full md:w-1/2 xl:w-1/2 pt-12 md:p-6 ">
             <h1 className="text-xl md:text-3xl lg:text-2xl  text-headerscolor mb-4">About Us</h1>
            <p className="text-lg md:text-xl lg:text-2xl mb-8">
