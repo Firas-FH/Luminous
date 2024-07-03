@@ -6,8 +6,8 @@ import Footer from '../Components/AllComponents/Footer/Footer'
 function RootLayout() {
   const location = useLocation();
   
-  const isSignUpPage = location.pathname === '/signup';
-  const isLogInPage = location.pathname === '/login';
+  // const isSignUpPage = location.pathname === '/signup';
+  // const isLogInPage = location.pathname === '/login';
 
   return (
     <>
@@ -15,7 +15,7 @@ function RootLayout() {
     <main>
       <Outlet/>
     </main>
-    {!(isSignUpPage || isLogInPage) && <Footer />}
+    {/* {!(isSignUpPage || isLogInPage) && <Footer />} */}
     </>
   )
 }

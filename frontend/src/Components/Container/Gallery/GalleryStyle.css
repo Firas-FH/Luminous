@@ -33,7 +33,7 @@
   line-height: 1;
 }
 
-.active{
+.filterItem .active{
   background-color: #DAA520;
   color: #fff;
   cursor: pointer;
