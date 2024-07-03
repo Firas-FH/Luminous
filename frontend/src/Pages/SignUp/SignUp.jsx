@@ -19,6 +19,7 @@ function SignUp() {
       .post("http://localhost:5000/register", { userName, userEmail, userPassword })
       .then(res => {
         setResponseMessage(res.data.message)
+        
         navigate("/")
       }
       )

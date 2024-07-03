@@ -20,7 +20,7 @@ function Login() {
 
       setUserEmail("");
       setUserPassword("");
-      // localStorage.setItem("userToken", response.data.userToken);
+      localStorage.setItem("userToken", response.data.userToken);
       setErrorMessage(response.data.error);
       navigate("/");
     } catch (error) {
