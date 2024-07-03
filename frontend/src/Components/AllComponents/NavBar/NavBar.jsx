@@ -38,39 +38,39 @@ const Navbar = () => {
       </div>
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li>
-          <a href="/" className={activeLink === '/' ? 'active' : ''}>
+          <Link to={"/"} className={activeLink === '/' ? 'active' : ''}>
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className={activeLink === '/about' ? 'active' : ''}>
+          <Link to={"/about"} className={activeLink === '/about' ? 'active' : ''}>
             About Us
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/services" className={activeLink === '/services' ? 'active' : ''}>
+          <Link to={"/services"} className={activeLink === '/services' ? 'active' : ''}>
             Services
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/gallery" className={activeLink === '/gallery' ? 'active' : ''}>
+          <Link to={"/gallery"} className={activeLink === '/gallery' ? 'active' : ''}>
             Gallery
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/testimonials" className={activeLink === '/testimonials' ? 'active' : ''}>
+          <Link to={"/testimonials"} className={activeLink === '/testimonials' ? 'active' : ''}>
             Testimonials
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/team" className={activeLink === '/team' ? 'active' : ''}>
+          <Link to={"/team"} className={activeLink === '/team' ? 'active' : ''}>
             Team
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/contact" className={activeLink === '/contact' ? 'active' : ''}>
+          <Link to={"/contact"} className={activeLink === '/contact' ? 'active' : ''}>
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       <div className="nav-right">

@@ -4,7 +4,6 @@ const Services = () => {
   return (
     <div className="services-container pl-[9%]">
       <h1 className="text-headerscolor font-montserratefont font-semibold text-[20px]   mb-4">Our Services</h1>
-      {/* <h1 className="text-xl  text-headerscolor mb-4">Our Services</h1> */}
       <div className="service-cards">
         <div className="service-card  ">
           <img src="./Picture/Event.png" alt="Checklist Icon" />
