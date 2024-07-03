@@ -13,6 +13,7 @@ function HomePage() {
   return (
     <>
     <Hero/>
+    
     <About />
     <Services />
     <Gallery/>
